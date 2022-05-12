@@ -1,7 +1,13 @@
 function computerPlay () {
     let choice = ["Rock", "Paper", "Scissors"];
-    return choice[Math.floor(Math.random()*choice.length)];
-    
+    const finalChoice = choice[Math.floor(Math.random()*choice.length)];
+    console.log("The Computer chose: " + finalChoice); 
+    return finalChoice;
+   
 }
-console.log("The Computer chose: " + computerPlay());
 
+computerPlay()
+
+function playRound() {
+
+}
