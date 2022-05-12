@@ -6,16 +6,16 @@ function computerPlay () {
    
 }
 function playRound(playerSelection, computerSelection) {    
-    computerSelection = computerPlay();
-    playerSelection = "Rock";
+    computerSelection = computerPlay().toLowerCase();
+    playerSelection = "Scissors".toLowerCase();
     let result = "";
     
     if (playerSelection===computerSelection) {
         result = "It's a draw!";
     }
 
-    else if (playerSelection==="Rock") {
-        if (computerSelection==="Paper"){
+    else if (playerSelection==="rock") {
+        if (computerSelection==="paper"){
             result = "You lost, Paper beats Rock!";
         }
 
@@ -24,8 +24,8 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    else if (playerSelection==="Paper"){
-        if (computerSelection==="Rock") {
+    else if (playerSelection==="paper"){
+        if (computerSelection==="rock") {
             result = "You won! Paper beats Rock!";
         }
 
@@ -34,8 +34,8 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-    else if (playerSelection==="Scissors"){
-        if (computerSelection==="Rock") {
+    else if (playerSelection==="scissors"){
+        if (computerSelection==="rock") {
             result = "You lost! Rock beats Scissors!";
         }
 
