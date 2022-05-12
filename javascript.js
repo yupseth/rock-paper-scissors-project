@@ -5,9 +5,19 @@ function computerPlay () {
     return finalChoice;
    
 }
+function playRound(playerSelection, computerSelection) {    
+    computerSelection = computerPlay();
+    playerSelection = "Rock";
+    let result = "";
+    
+    if (playerSelection===computerSelection) {
+        result = "It's a draw!";
+    }
 
-computerPlay()
-
-function playRound() {
-
+    else{
+        result = "somebody won";
+    }
+    console.log(result);
+    return result;
 }
+playRound();
