@@ -14,8 +14,34 @@ function playRound(playerSelection, computerSelection) {
         result = "It's a draw!";
     }
 
-    else{
-        result = "somebody won";
+    else if (playerSelection==="Rock") {
+        if (computerSelection==="Paper"){
+            result = "You lost, Paper beats Rock!";
+        }
+
+        else {
+            result = "You won, Rock beats Scissors!";
+        }
+    }
+
+    else if (playerSelection==="Paper"){
+        if (computerSelection==="Rock") {
+            result = "You won! Paper beats Rock!";
+        }
+
+        else {
+            result = "You lost! Scissors beats Paper!";
+        }
+    }
+
+    else if (playerSelection==="Scissors"){
+        if (computerSelection==="Rock") {
+            result = "You lost! Rock beats Scissors!";
+        }
+
+        else{
+            result = "You won! Scissors beats Paper!";
+        }
     }
     console.log(result);
     return result;
